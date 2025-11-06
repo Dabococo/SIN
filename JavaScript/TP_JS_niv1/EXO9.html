@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercice 9</title>
+</head>
+<body>
+    <h1>Calcul de moyenne</h1>
+    <button onclick="calculerMoyenne()">Calculer la moyenne</button>
+    <p id="resultat"></p>
+
+    <script>
+        function calculerMoyenne() {
+            var nbEtudiants = prompt("Combien d'étudiants ?");
+            var notes = [];
+            var somme = 0;
+            
+            // saisir les notes
+            for(var i = 0; i < nbEtudiants; i++) {
+                var note = parseFloat(prompt("Note de l'étudiant " + (i+1) + " :"));
+                notes.push(note);
+                somme += note;
+            }
+            
+            // calculer la moyenne
+            var moyenne = somme / nbEtudiants;
+            
+            document.getElementById("resultat").innerHTML = "Moyenne de la classe : " + moyenne.toFixed(2);
+        }
+    </script>
+</body>
+</html>
+

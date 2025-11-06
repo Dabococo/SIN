@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question 6</title>
+</head>
+<body>
+    <h1>Calculs avec alert et console.log</h1>
+    <div id="resultat"></div>
+
+    <script>
+        var a = 5;
+        var b = 6;
+        
+        var somme = a + b;
+        var division = a / b;
+        
+        // affichage avec alert
+        alert("Somme : " + somme + "\nDivision : " + division);
+        
+        // affichage avec console.log
+        console.log("Somme : " + somme);
+        console.log("Division : " + division);
+        
+        // affichage sur la page
+        document.getElementById("resultat").innerHTML = "Somme : " + somme + "<br>Division : " + division;
+    </script>
+</body>
+</html>
+

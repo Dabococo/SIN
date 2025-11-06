@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question 4</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: red;
+        }
+        button {
+            background-color: #555555;
+            border: 2px solid #444336;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>SNAP 1</h1>
+    <button ondblclick="fonctionDoubleClick()">Double-cliquer ici</button>
+    <button onmouseover="fonctionMouseOver()">Passer la souris dessus</button>
+    <button onmouseout="fonctionMouseOut()">Sortir la souris</button>
+    <h2 class="s1" id="demo"></h2>
+
+    <script>
+        function fonctionDoubleClick(){
+            document.getElementById("demo").innerHTML = "Double-cliqué";
+        }
+        
+        function fonctionMouseOver(){
+            document.getElementById("demo").innerHTML = "Vous avez passé la souris dessus";
+        }
+        
+        function fonctionMouseOut(){
+            document.getElementById("demo").innerHTML = "Vous avez retiré la souris";
+        }
+    </script>
+</body>
+</html>
+

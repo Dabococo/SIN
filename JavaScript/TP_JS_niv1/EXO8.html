@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercice 8</title>
+</head>
+<body>
+    <h1>Liste de prénoms</h1>
+    <button onclick="ajouterPrenoms()">Ajouter des prénoms</button>
+
+    <script>
+        function ajouterPrenoms() {
+            var tableau = [];
+            var continuer = true;
+            
+            while(continuer) {
+                var prenom = prompt("Entrez un prénom :");
+                if(prenom) {
+                    tableau.push(prenom);
+                } else {
+                    continuer = false;
+                }
+            }
+            
+            // afficher le tableau
+            alert("Liste des prénoms : " + tableau);
+        }
+    </script>
+</body>
+</html>
+

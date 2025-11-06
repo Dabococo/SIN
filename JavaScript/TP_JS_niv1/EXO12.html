@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercice 12 - Commentaire selon l'âge</title>
+</head>
+<body>
+    <h1>Quel est votre âge ?</h1>
+    <button onclick="donnerCommentaire()">Vérifier</button>
+    <p id="commentaire"></p>
+
+    <script>
+        function donnerCommentaire() {
+            var age = prompt("Entrez votre âge :");
+            var message = "";
+            
+            if(age >= 1 && age <= 6) {
+                message = "Vous êtes un jeune enfant.";
+            } else if(age >= 7 && age <= 11) {
+                message = "Vous êtes un enfant qui a atteint l'âge de raison.";
+            } else if(age >= 12 && age <= 17) {
+                message = "Vous êtes un adolescent.";
+            } else if(age >= 18 && age <= 120) {
+                message = "Vous êtes un adulte.";
+            } else {
+                message = "Âge non valide.";
+            }
+            
+            document.getElementById("commentaire").innerHTML = message;
+        }
+    </script>
+</body>
+</html>
+

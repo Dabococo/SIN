@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercice 11 - Menu Restaurant</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+        select {
+            margin: 10px;
+            padding: 10px;
+        }
+        button {
+            background-color: red;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #resultat {
+            margin-top: 20px;
+            font-size: 18px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Composez votre menu</h1>
+    <p>Choisissez une entrée, un plat, un dessert puis appuyez sur le bouton "Envoi".</p>
+    
+    <label>Entrées</label>
+    <select id="entree">
+        <option value="7">Salade de tomates - 7€</option>
+        <option value="8">Soupe - 8€</option>
+        <option value="6">Salade verte - 6€</option>
+    </select>
+    
+    <label>Plats</label>
+    <select id="plat">
+        <option value="12">Lasagnes - 12€</option>
+        <option value="15">Steak frites - 15€</option>
+        <option value="13">Poulet rôti - 13€</option>
+    </select>
+    
+    <label>Desserts</label>
+    <select id="dessert">
+        <option value="5">Café - 5€</option>
+        <option value="6">Tarte - 6€</option>
+        <option value="7">Glace - 7€</option>
+    </select>
+    
+    <br>
+    <button onclick="calculerTotal()">Envoi</button>
+    
+    <div id="resultat"></div>
+
+    <script>
+        function calculerTotal() {
+            // recuperer les prix
+            var prixEntree = parseInt(document.getElementById("entree").value);
+            var prixPlat = parseInt(document.getElementById("plat").value);
+            var prixDessert = parseInt(document.getElementById("dessert").value);
+            
+            // calculer le total
+            var total = prixEntree + prixPlat + prixDessert;
+            
+            // afficher
+            document.getElementById("resultat").innerHTML = "Le total est de : " + total + " euros.";
+        }
+    </script>
+</body>
+</html>
+
